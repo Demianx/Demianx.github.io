@@ -1,0 +1,104 @@
+body{
+    background: #ececec;
+    padding: 5%;
+}
+
+.img-resp{
+    display: block;
+    width: 150px;
+    margin: auto;
+}
+
+.container-fluid{
+    background: white;
+    marin: 0% 5%;
+    padding: 2% 7.5% 5% 7.5%;
+    box-shadow: 0 0 10px #BFBFBF;
+}
+
+.section-wrap{
+    padding: 2% 0%;
+}
+
+.JobHeading{
+    padding: 5% 7.5%;
+    text-align: center;
+    font-size: 4.5rem;
+    font-family: "montserrat";
+}
+
+.CompanyLogo{
+    display: block;
+    padding: 0% 7.5%;
+}
+
+.CompanyName,.PublishingDate{
+    padding: 3% 7.5% 0% 7.5%;
+    text-align: justify;
+    font-size: 2.5rem;
+}
+
+.Location,.Type,.Category{
+    padding: 0.5% 7.5%;
+    text-align: justify;
+    font-size: 2rem;
+    font-family: "montserrat";
+}
+
+.JobLocation,.JobType,.JobCategory{
+    padding: 0.5% 7.5%;
+    text-align: justify;
+    font-size: 2rem;
+}
+
+.job-desc-wrap{
+    margin: 0% 1%;
+    border-top: 1px solid #eeeeee;
+    border-bottom: 1px solid #eeeeee;
+    padding: 0.5% 0%;
+}
+
+.Description,.Requirement,.Education{
+    padding: 0.5% 5%;
+    text-align: justify;
+    font-size: 2rem;
+    font-family: "montserrat";
+}
+
+.JobDescription,.JobRequirement,.EducationRequirement{
+    padding: 0.5% 5%;
+    text-align: justify;
+    font-size: 1.5rem;
+}
+
+.ApplyButton{
+    padding: 0% 5%;
+}
+
+.ApplyButton > a{
+    font-family: "montserrat";
+    font-size: 2rem;
+    padding: 2.5% 5%;
+}
+
+.glyphicon{
+    font-size: 1.5rem;
+    padding: 0% 2%;
+}
+.company-wrap{
+    margin: 0% 1%;
+    background-color: #fcfcfc;
+    box-shadow: 0 0 5px #eeeeee;
+}
+
+@media screen and (max-width: 767px) {
+    .center{
+        text-align: center;
+    }
+
+    .ApplyButton > a{
+        display: block;
+        padding: 5% 5%;
+        width: 100%
+    }
+}

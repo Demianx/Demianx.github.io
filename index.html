@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cohort</title>
+
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="fonts/font.css" rel="stylesheet">
+    <link href="css/stylesheet.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<section class="container-fluid">
+<section class="section-wrap">
+    <div class="row">
+    <div class="JobHeading">Front-End Web Developer</div>
+        </div>
+    </section>
+
+<section class="section-wrap company-wrap">
+    <div class="row">
+        <div class="col-sm-4 col-md-4">
+            <div class="CompanyLogo"><img src="image/logo.png" class="img-resp" alt="CompanyLogo"/></div>
+            </div>
+        <div class="col-sm-8 col-md-8">
+        <div class="row">
+                <div class="CompanyName center">CompanyName</div>
+        </div>
+        <div class="row">
+                <div class="PublishingDate center">Published: 0/0/0</div>
+        </div>
+        </div>
+    </div>
+  </section>
+
+<section class="section-wrap">
+    <div class="row job-desc-wrap">
+        <div class="col-sm-4 col-md-4">
+            <div class="Location center"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>Location</div>
+        </div>
+        <div class="col-sm-8 col-md-8">
+            <div class="JobLocation center">CompanyLocation</div>
+        </div>
+    </div>
+    <div class="row job-desc-wrap">
+        <div class="col-sm-4 col-md-4">
+            <div class="Type center"><span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span>Job Type</div>
+        </div>
+        <div class="col-sm-8 col-md-8">
+            <div class="JobType center">JobType</div>
+        </div>
+    </div>
+    <div class="row job-desc-wrap">
+        <div class="col-sm-4 col-md-4">
+            <div class="Category center"><span class="glyphicon glyphicon-tags" aria-hidden="true"></span>Category</div>
+        </div>
+        <div class="col-sm-8 col-md-8">
+            <div class="JobCategory center">JobCategory</div>
+        </div>
+    </div>
+</section>
+
+<section class="section-wrap">
+    <div class="row">
+        <div class="Description">Description</div>
+    </div>
+    <div class="row">
+        <div class="JobDescription">A part-time front-end web developer is required by Manson Software Group who would be working on a menu system for our company’s software. The candidate will be entrusted with designing and development of the menu. The main task is to create an input box which will take input from the user and store it in the memory for later use along with compression. This data will be then used by our back-end developer for additional features of the program. The front-end developer will be working in a then have to use the data for parsing and other requirements.</div>
+    </div>
+</section>
+
+<section class="section-wrap">
+    <div class="row">
+        <div class="Requirement">Requirement</div>
+    </div>
+    <div class="row">
+        <div class="JobRequirement">Knowledge about the prevailing standard data collection techniques is required so that collaboration with other developers is simplified. It would be of great importance if the candidate had been a front-end developer as a part of a team previously. Also, a minimum of two years’ experience in the area is required. The applicant must be able to handle the English menus correctly without any mistakes. Communication skills are necessary as weekly demonstrations to the senior developer are required.</div>
+    </div>
+</section>
+
+<section class="section-wrap">
+    <div class="row">
+        <div class="Education">Education</div>
+    </div>
+    <div class="row">
+        <div class="EducationRequirement">A bachelors’ degree in software development or equivalent is necessary.</div>
+    </div>
+</section>
+
+<section class="section-wrap">
+    <div class="row">
+        <div class="ApplyButton"><a class="btn btn-default" href="#" role="button">Apply</a></div>
+    </div>
+</section>
+</section>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script>
+    var RemoteStyleSheet = new Class({
+
+  Implements : [Options,Events],
+
+  options : {
+    delay : 100,
+    maxAttempts : 1000,
+    idPrefix : 'css-preload-'
+  },
+
+  initialize : function(path,options) {
+    this.setOptions(options);
+    this.path = path;
+    this.id = this.options.idPrefix + (new Date().getTime());
+  },
+
+  getPath : function() {
+    return this.path;
+  },
+
+  getID : function() {
+    return this.id;
+  },
+
+  getElement : function() {
+    return this.link;
+  },
+
+  _onready : function() {
+    var args = [this.getPath(),this.getElement()];
+    this.fireEvent('ready',args);
+  },
+
+  _onerror : function() {
+    this.link.destroy();
+    this.link = null;
+    var args = [this.getPath()];
+    this.fireEvent('error',args);
+  },
+
+  _onstart : function() {
+    var args = [this.getPath(),this.getElement()];
+    this.fireEvent('start',args);
+  },
+
+  createLinkElement : function() {
+    this.link = document.createElement('link');
+    this.link.type = 'text/css';
+    this.link.rel = 'stylesheet';
+    this.link.id = this.getID();
+    this.link.href = this.getPath();
+    return this.link;
+  },
+
+  _checker : function() {
+    if(!this.counter) {
+      this.counter = 0;
+    }
+
+    var target = $(this.getID());
+    if(target.sheet) {
+      var stylesheets = document.styleSheets;
+      for(var i=0;i&lt;stylesheets.length;i++) {
+        var file = stylesheets[i];
+        var owner = file.ownerNode ? file.ownerNode : file.owningElement;
+        if(owner && owner.id == this.getID()) {
+          this._onready();
+          return;
+        }
+
+        if(this.counter++>this.options.maxAttempts) {
+          this._onerror();
+          return;
+        }
+      }
+    }
+
+    this._checker.delay(this.options.delay,this);
+  },
+
+  start : function() {
+
+    var fn;
+    this.link = this.createLinkElement();
+    if(Browser.ie || Browser.opera) {
+      this.link.onload = this._onready.bind(this);
+      this.link.onerror = this._onerror.bind(this);
+    }
+    else {
+      fn = this._checker.bind(this);
+    }
+
+    document.getElement('head').appendChild(this.link);
+    this._onstart();
+
+    if(fn) {
+      fn();
+    }
+  }
+
+});
+
+new RemoteStyleSheet('css/bootstrap.css',{
+
+  onReady : function() {
+    alert('we are ready');
+  },
+
+  onError : function() {
+    alert('damn too bad');
+  },
+
+  onStart : function() {
+    alert('starting to download');
+  }
+
+}).start();
+
+new RemoteStyleSheet('css/stylesheet.css',{
+
+  onReady : function() {
+    alert('we are ready');
+  },
+
+  onError : function() {
+    alert('damn too bad');
+  },
+
+  onStart : function() {
+    alert('starting to download');
+  }
+
+}).start();
+
+new RemoteStyleSheet('fonts/font.css',{
+
+  onReady : function() {
+    alert('we are ready');
+  },
+
+  onError : function() {
+    alert('damn too bad');
+  },
+
+  onStart : function() {
+    alert('starting to download');
+  }
+
+}).start();
+</script>
+</body>
+</html>
